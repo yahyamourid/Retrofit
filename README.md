@@ -12,17 +12,16 @@ Retrofit permet de :
 - IDE de votre choix pour le backend (Eclipse, IntelliJ, etc.)
 - AndroidStudio 
 
-## Lancement du projet:
+## Lancement de projet:
 Clonez ce dépôt sur votre machine locale:
 ```
 https://github.com/yahyamourid/Retrofit.git
 ```
 ### Lancement de backend springboot
-- Accéder au dossie BackEnd-Spring à l'aide d'un IDE
+- Accéder au dossier BackEnd-Spring à l'aide d'un IDE
 - Créez une base de données MySQL nommée nom_de_votre_base_de_donnees
 - Mettez à jour le fichier `src/main/resources/application.properties` avec les informations de votre base de données :
 ```
-
 # ===============================
 # = DATA SOURCE
 # ===============================
@@ -54,6 +53,15 @@ spring.jpa.hibernate.ddl-auto = update
 
 #springdoc.swagger-ui.path=/swagger-ui
 ```
+- Compilez et exécutez l'application avec votre IDE ou avec la console en exécutant les commandes :
+```
+ mvn clean install
+ mvn spring-boot:run
+```
+### Lancement dans android studio 
+- Ouvrir le dossier EmployeApp
+- Executer le projet
+
 
 
 
