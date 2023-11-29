@@ -62,6 +62,18 @@ spring.jpa.hibernate.ddl-auto = update
 - Ouvrir le dossier EmployeApp
 - Executer le projet
 
+## L'utilisation de Retrofit
+### Dépendances
+```
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+```
+### Interface ServiceApi pour Retrofit
+![image](https://github.com/yahyamourid/Retrofit/assets/128039351/54aa4765-2922-451c-82ce-3a4b3f9950c2)
+L'interface ServiceApi est un composant clé lors de l'utilisation de Retrofit dans le développement d'applications Android. Cette interface détaille les points d'accès auxquels l'application peut se connecter pour effectuer des opérations CRUD (Create, Read, Update, Delete) sur des ressources de service.
+Les méthodes déclarées dans l'interface sont basées sur les contrôleurs dans le backend:
+![image](https://github.com/yahyamourid/Retrofit/assets/128039351/cb74802d-0c99-46f5-8400-4be44888b473)
+
 
 
 
