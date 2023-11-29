@@ -68,11 +68,24 @@ spring.jpa.hibernate.ddl-auto = update
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 ```
-### Interface ServiceApi pour Retrofit
+### L'interface ServiceApi pour Retrofit
 ![image](https://github.com/yahyamourid/Retrofit/assets/128039351/54aa4765-2922-451c-82ce-3a4b3f9950c2)
-L'interface ServiceApi est un composant clé lors de l'utilisation de Retrofit dans le développement d'applications Android. Cette interface détaille les points d'accès auxquels l'application peut se connecter pour effectuer des opérations CRUD (Create, Read, Update, Delete) sur des ressources de service.
+
+L'interface `ServiceApi` est un composant clé lors de l'utilisation de Retrofit dans le développement d'applications Android. Cette interface détaille les points d'accès auxquels l'application peut se connecter pour effectuer des opérations CRUD (Create, Read, Update, Delete) sur des ressources de service.
+
 Les méthodes déclarées dans l'interface sont basées sur les contrôleurs dans le backend:
+
 ![image](https://github.com/yahyamourid/Retrofit/assets/128039351/cb74802d-0c99-46f5-8400-4be44888b473)
+
+### La classe RetrofitService
+![image](https://github.com/yahyamourid/Retrofit/assets/128039351/129d990b-74f1-4a8f-9aa5-8a02977250ae)
+
+Le code dans la classe `RetrofitService` est essentiel pour intégrer Retrofit dans une application Android. Il définit l'URL de base du serveur distant et utilise le modèle Singleton pour s'assurer qu'une seule instance de l'objet Retrofit est créée pendant le cycle de vie de l'application. La méthode statique getClient() renvoie cette instance configurée, prête à être utilisée pour effectuer des appels réseau. En utilisant un convertisseur Gson, il automatise la conversion des réponses réseau en objets Java. Ainsi, ce code offre une structure organisée, encourage la réutilisation des ressources et simplifie la gestion des appels réseau au sein de l'application Android.
+
+### Exemple 
+![image](https://github.com/yahyamourid/Retrofit/assets/128039351/e2f67850-84c7-4779-a74d-ed1bd8fc58b8)
+
+Cet exemple d'utilisation démontre comment effectuer une opération réseau d'ajout de service en utilisant Retrofit . La méthode `addService` crée une instance de l'interface `ServiceApi` à l'aide de la classe `RetrofitService`, puis utilise cette instance pour créer un objet `Call` représentant la requête d'ajout de service. La méthode `enqueue` est utilisée pour exécuter la requête de manière asynchrone.
 
 
 
